@@ -1,0 +1,273 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #000430;
+  --secondaryBackground: #171c48;
+  --text: #fff;
+  --purple: #828dff;
+  --teal: #24feee;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  display: flex;  
+  /* justify-content: center; */ 
+  align-items: center;  
+  min-height: 100vh;       
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5rem;
+  margin-top: 100px;
+}
+
+.box-cont {
+  background: var(--secondaryBackground);
+  width: 380px;
+  padding: 20px 25px;
+  border-radius: 20px;
+  border: 1px solid var(--purple);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+}
+
+.box-heading h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.box-heading p {
+ font-family: "Poppins", sans-serif;
+  margin: 2px 0;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+#box-progresebar {
+  width: 250px;
+  height: 8px;
+  background: #232a60;
+  border-radius: 50px;
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+#progress {
+  width: 0%;
+  height: 100%;
+  background: var(--teal);
+  border-radius: 50px;
+}
+
+.box-number {
+  width: 60px;
+  height: 60px;
+  background: var(--purple);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#numbers {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+form {
+  margin-top: 2rem;
+  width: 380px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid var(--purple);
+  border-radius: 0.5rem;
+  outline: none;
+  background: transparent;
+  color: var(--text);
+  font-size: 0.7rem;
+}
+
+form button {
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background: var(--purple);
+  font-size: 1.5rem;
+  color: var(--text);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+form button:hover {
+  opacity: 0.8;
+}
+
+.box-list {
+  margin-top: 1.5rem;
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.box-list li {
+  background: var(--secondaryBackground);
+  padding: 5px;
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.box-list li.checked p {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.box-list li p {
+  flex: 1;
+}
+
+.box-list li button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+.taskItem {
+  width: 100%;
+  height: 5vh;
+  border: 1px solid var(--purple);
+  padding: 15px;
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.task input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.task p {
+  font-size: 0.9rem;
+  color: var(--text);
+  flex: 1;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.icons img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.icons img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+
+ /*   RESPONSIVE MEDIA QUERIES */
+ 
+ 
+@media (max-width: 600px) {
+
+  .container {
+    margin-top: 2rem;
+  }
+
+  .box-cont {
+    width: 350px;
+    padding: 15px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #box-progresebar {
+    width: 250px;
+  }
+
+  .box-number {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+  }
+
+  form {
+    width: 80%;
+    flex-direction: column;
+    gap: 8px;
+  }
+  form{
+    display: flex;
+    flex-direction: row;
+  }
+
+  form input {
+    width: 95vw;
+    font-size: 0.8rem;
+  }
+
+  form button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  }
+
+  .box-list {
+    width: 90%;
+  }
+
+  .taskItem {
+    height: auto;
+    padding: 10px;
+  }
+
+  .task p {
+    font-size: 0.85rem;
+  }
+}
+  
+
