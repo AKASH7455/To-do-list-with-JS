@@ -12,59 +12,57 @@
   --teal: #24feee;
 }
 
+/* BODY */
 body {
-  font-family: "Poppins", sans-serif;
   background-color: var(--background);
   color: var(--text);
-  font-family: Arial, sans-serif;
-  display: flex;  
-  /* justify-content: center; */ 
-  align-items: center;  
-  min-height: 100vh;       
-  flex-direction: column;
-}
-
-.container {
+  font-family: "Poppins", sans-serif;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  margin-top: 5rem;
-  margin-top: 100px;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center; 
 }
 
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 100px;
+  padding: 0 12px;
+}
+
+/* HEADER BOX */
 .box-cont {
   background: var(--secondaryBackground);
-  width: 500px;
+  width: 100%;
   padding: 20px 25px;
   border-radius: 20px;
   border: 1px solid var(--purple);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 5px;
-  position: relative;
+  gap: 15px;
 }
 
 .box-heading h1 {
-  font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 1.4rem;
 }
 
 .box-heading p {
- font-family: "Poppins", sans-serif;
-  margin: 2px 0;
   font-size: 0.8rem;
   opacity: 0.7;
+  margin-top: 2px;
 }
 
 #box-progresebar {
-  width: 250px;
+  width: 100%;
+  max-width: 250px;
   height: 8px;
   background: #232a60;
   border-radius: 50px;
-  margin-top: 0.5rem;
+  margin-top: 8px;
   overflow: hidden;
 }
 
@@ -75,9 +73,10 @@ body {
   border-radius: 50px;
 }
 
+/* NUMBER CIRCLE */
 .box-number {
-  width: 60px;
-  height: 60px;
+  min-width: 55px;
+  height: 55px;
   background: var(--purple);
   border-radius: 50%;
   display: flex;
@@ -90,11 +89,11 @@ body {
   font-weight: 600;
 }
 
+/* FORM */
 form {
-  margin-top: 2rem;
-  width: 480px;
+  margin-top: 25px;
+  width: 100%;
   display: flex;
-  align-items: center;
   gap: 10px;
 }
 
@@ -102,72 +101,48 @@ form input {
   flex: 1;
   padding: 10px;
   border: 1px solid var(--purple);
-  border-radius: 0.5rem;
-  outline: none;
+  border-radius: 8px;
   background: transparent;
   color: var(--text);
-  font-size: 0.7rem;
+  outline: none;
+  font-size: 0.85rem;
 }
 
 form button {
-  width: 45px;
-  height: 45px;
+  width: 48px;
+  height: 48px;
   border: none;
   border-radius: 50%;
   background: var(--purple);
-  font-size: 1.5rem;
   color: var(--text);
+  font-size: 1.6rem;
   cursor: pointer;
   transition: 0.2s;
 }
 
 form button:hover {
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
+/* TASK LIST */
 .box-list {
-  margin-top: 1.5rem;
-  width: 380px;
+  list-style: none;
+  margin-top: 20px;
+  width: 80%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
-.box-list li {
-  background: var(--secondaryBackground);
-  padding: 5px;
-  border-radius: 7px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-}
-
-.box-list li.checked p {
-  text-decoration: line-through;
-  opacity: 0.4;
-}
-
-.box-list li p {
-  flex: 1;
-}
-
-.box-list li button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 1.3rem;
-}
 .taskItem {
   width: 100%;
-  height: 5vh;
-  border: 1px solid var(--purple);
-  padding: 15px;
+  background: var(--secondaryBackground);
+  padding: 12px;
   border-radius: 7px;
+  border: 1px solid var(--purple);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
 }
 
 .task {
@@ -184,83 +159,66 @@ form button:hover {
 }
 
 .task p {
-  font-size: 0.9rem;
-  color: var(--text);
   flex: 1;
+  font-size: 0.9rem;
+}
+
+.task.checked p {
+  text-decoration: line-through;
+  opacity: 0.5;
 }
 
 .icons {
   display: flex;
-  align-items: center;
-  gap: 5px;
+  gap: 8px;
 }
 
 .icons img {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   cursor: pointer;
-  opacity: 0.8;
+  opacity: 0.7;
   transition: 0.2s;
 }
 
 .icons img:hover {
   opacity: 1;
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
-
- /* RESPONSIVE - ONLY FOR PHONES */
+/* RESPONSIVE */
 @media (max-width: 480px) {
 
   .container {
-    margin-top: 2rem;
+    margin-top: 60px;
   }
 
   .box-cont {
-    width: 90%;
-    max-width: 350px;
-    padding: 15px 20px;
     flex-direction: column;
+    gap: 20px;
     text-align: center;
   }
 
   #box-progresebar {
-    width: 100%;
-    max-width: 250px;
+    max-width: 100%;
   }
 
   .box-number {
     width: 45px;
     height: 45px;
-    margin-top: 10px;
   }
 
   form {
-    width: 90%;
-    flex-direction: row;
-    justify-content: center;
     gap: 8px;
   }
 
   form input {
-    width: 100%;
     font-size: 0.8rem;
   }
 
   form button {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-
-  .box-list {
-    width: 90%;
-  }
-
-  .taskItem {
-    height: auto;
-    padding: 10px;
+    width: 42px;
+    height: 42px;
   }
 
   .task p {
